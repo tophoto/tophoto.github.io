@@ -1,8 +1,6 @@
-$(document).ready(function() {
-   $('.menu_icon').click(function(event) {
-     $('.menu_icon,.menu_body').toggleClass('active');
-     $('body').toggleClass('lock');
- 
-   });
- });
-
+function menuToggle(){
+   const toggleMenu = document.querySelector('.toggle');
+   const section = document.querySelector('section');
+   toggleMenu.classList.toggle('active');
+   section.classList.toggle('active');
+}
