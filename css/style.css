@@ -167,7 +167,7 @@ header .toggle::before {
   background: #fff;
 }
 
-.glass {
+section .glass {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -186,63 +186,10 @@ header .toggle::before {
           transition-delay: 0s;
 }
 
-section.active .glass {
-  width: 100%;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  -webkit-box-shadow: 10px 0 20px rgba(97, 97, 97, 0.5);
-          box-shadow: 10px 0 20px rgba(97, 97, 97, 0.5);
-  -webkit-transition-delay: 0s;
-       -o-transition-delay: 0s;
-          transition-delay: 0s;
-}
-
-section.active .content {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateX(-200px);
-      -ms-transform: translateX(-200px);
-          transform: translateX(-200px);
-  -webkit-transition-delay: 0s;
-       -o-transition-delay: 0s;
-          transition-delay: 0s;
-}
-
-section.active .sci li {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateX(-100px);
-      -ms-transform: translateX(-100px);
-          transform: translateX(-100px);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transition-delay: 0s;
-       -o-transition-delay: 0s;
-          transition-delay: 0s;
-  -webkit-transition-delay: calc(0.2s * var(--j));
-       -o-transition-delay: calc(0.2s * var(--j));
-          transition-delay: calc(0.2s * var(--j));
-}
-
-section.active .navigation li {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transform: translateX(0px);
-      -ms-transform: translateX(0px);
-          transform: translateX(0px);
-  -webkit-transition-delay: calc(0.2s * var(--j));
-       -o-transition-delay: calc(0.2s * var(--j));
-          transition-delay: calc(0.2s * var(--j));
-}
-
 section .content {
-  padding-top: 200px;
-  position: relative;
-  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 30%;
   z-index: 10;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -351,6 +298,59 @@ section .navigation li a:hover {
   color: #fff;
   letter-spacing: 10px;
   text-transform: lowercase;
+}
+
+section.active .glass {
+  width: 100%;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-box-shadow: 10px 0 20px rgba(97, 97, 97, 0.5);
+          box-shadow: 10px 0 20px rgba(97, 97, 97, 0.5);
+  -webkit-transition-delay: 0s;
+       -o-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+section.active .content {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(-200px);
+      -ms-transform: translateX(-200px);
+          transform: translateX(-200px);
+  -webkit-transition-delay: 0s;
+       -o-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+section.active .sci li {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(-100px);
+      -ms-transform: translateX(-100px);
+          transform: translateX(-100px);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0s;
+       -o-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-delay: calc(0.2s * var(--j));
+       -o-transition-delay: calc(0.2s * var(--j));
+          transition-delay: calc(0.2s * var(--j));
+}
+
+section.active .navigation li {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition-delay: calc(0.2s * var(--j));
+       -o-transition-delay: calc(0.2s * var(--j));
+          transition-delay: calc(0.2s * var(--j));
 }
 
 @media (max-width: 991px) {
